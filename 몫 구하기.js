@@ -11,7 +11,7 @@
  * @returns {number} 첫 번째 정수를 두 번째 정수로 나눈 몫
  */
 function solution(num1, num2) {
-  let answer = parseInt(num1 / num2);
+  let answer = Math.trunc(num1 / num2);
 
   return answer;
 }
