@@ -21,7 +21,8 @@ function solution(polynomial) {
   const constantTerm = term
     .filter((value) => !value.includes("x"))
     .reduce((a, c) => a + parseInt(c), 0);
-  /** 합산된 항
+  /**
+   * 합산된 항
    * @type {(number | string)[]}
    */
   const resultTerm = [];
