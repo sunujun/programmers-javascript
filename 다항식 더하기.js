@@ -16,11 +16,14 @@ function solution(polynomial) {
   const linearTerm = term
     .filter((value) => value.includes("x"))
     .map((value) => parseInt(value.replace("x", "")) || 1)
-    .reduce((a, c) => a + c, 0);
+    .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
   /** 상수항 */
   const constantTerm = term
     .filter((value) => !value.includes("x"))
-    .reduce((a, c) => a + parseInt(c), 0);
+    .reduce(
+      (accumulator, currentValue) => accumulator + parseInt(currentValue),
+      0
+    );
   /**
    * 합산된 항
    * @type {(number | string)[]}
